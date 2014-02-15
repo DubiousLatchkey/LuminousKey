@@ -49,7 +49,12 @@ public class MoreActivity extends Activity {
 		boolean isConnected = activeNetwork != null &&
 		                      activeNetwork.isConnectedOrConnecting();
 		if (isConnected == true){
-//			rates = getwebsite.GetWebsite();
+			try{
+			rates = getwebsite.GetWebsite();
+			} catch (NullPointerException e){
+				money.setText("Rates update failed");
+			}
+
 		}
 		
 
@@ -72,7 +77,11 @@ public class MoreActivity extends Activity {
 					public void onClick(View v) {
 					//	result.setText(String.valueOf(from.getSelectedItemPosition()));
 				         if (online.isChecked()) {
-//						rates = getwebsite.GetWebsite();
+/*				        	 try{
+						rates = getwebsite.GetWebsite();
+				        	 } catch (Exception e){
+				        		 money.setText("null");
+				        	 }*/
 				         }
 //				         if(rates.length == 0){
 //				        	 for(int i=0; i < old_rates.length;i++)
