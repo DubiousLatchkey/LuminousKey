@@ -22,9 +22,8 @@ public class GetWebsite {
 		        	String ConvertRate[] = inputLine.split(" ");
 		        	if (ConvertRate.length == 3 && ConvertRate[0].contains("Cube")){
 		        		//System.out.println(ConvertRate[1].substring(10, 13));
-//		        		System.out.println(ConvertRate[2].substring(6, ConvertRate[2].length() - 3));
+		        		//System.out.println(ConvertRate[2].substring(6, ConvertRate[2].length() - 3));
 		        		Double rate = Double.parseDouble(ConvertRate[2].substring(6, ConvertRate[2].length() - 3));
-		        		//Double rate = Double.parseDouble("8.3");
 		        		rates[idx++] = rate;
 		        	
 		        	}

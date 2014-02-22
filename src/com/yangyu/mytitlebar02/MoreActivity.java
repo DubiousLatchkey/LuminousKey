@@ -77,16 +77,13 @@ public class MoreActivity extends Activity {
 					public void onClick(View v) {
 					//	result.setText(String.valueOf(from.getSelectedItemPosition()));
 				         if (online.isChecked()) {
-/*				        	 try{
+				        	 try{
 						rates = getwebsite.GetWebsite();
 				        	 } catch (Exception e){
-				        		 money.setText("null");
-				        	 }*/
+				        		// money.setText("null");
+				        	 }
 				         }
-//				         if(rates.length == 0){
-//				        	 for(int i=0; i < old_rates.length;i++)
-//				        	 rates[i] = old_rates[i];
-//				         }
+
 						Double fromRate = rates[from.getSelectedItemPosition()];
 						Double toRate = rates[to.getSelectedItemPosition()];
 						Double newRate = toRate/fromRate;
