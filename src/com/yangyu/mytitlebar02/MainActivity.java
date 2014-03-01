@@ -92,7 +92,7 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		
 		//给消息提示文本设置文字
 		mMessageTipsMention.setText("2");
-		mMessageTipsPerson.setText("4");
+		mMessageTipsPerson.setText("4"); 
 		
 		//添加进Tab选项卡
 		mTabHost.addTab(buildTabSpec(HOME_TAB, mHomeIntent));

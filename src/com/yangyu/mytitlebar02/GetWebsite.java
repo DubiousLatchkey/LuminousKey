@@ -1,4 +1,4 @@
-package com.yangyu.mytitlebar02;
+		package com.yangyu.mytitlebar02;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,6 +23,7 @@ public class GetWebsite {
 		        	if (ConvertRate.length == 3 && ConvertRate[0].contains("Cube")){
 		        		//System.out.println(ConvertRate[1].substring(10, 13));
 		        		//System.out.println(ConvertRate[2].substring(6, ConvertRate[2].length() - 3));
+		        		System.out.println("are you OK?");
 		        		Double rate = Double.parseDouble(ConvertRate[2].substring(6, ConvertRate[2].length() - 3));
 		        		rates[idx++] = rate;
 		        	

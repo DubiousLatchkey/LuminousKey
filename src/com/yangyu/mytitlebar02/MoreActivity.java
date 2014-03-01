@@ -52,7 +52,8 @@ public class MoreActivity extends Activity {
 			try{
 			rates = getwebsite.GetWebsite();
 			} catch (NullPointerException e){
-				money.setText("Rates update failed");
+				
+				//money.setText("Rates update failed");
 			}
 
 		}
