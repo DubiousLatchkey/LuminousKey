@@ -7,12 +7,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yangyu.mytitlebar02.home.HomeActivity;
 
@@ -20,7 +24,12 @@ import com.yangyu.mytitlebar02.home.HomeActivity;
  * @author yangyu
  *	功能描述：主Activity程序入口类
  */
+
 public class MainActivity extends TabActivity implements OnCheckedChangeListener {
+	
+	public Button button1;
+	public Button button2;
+	public Button button3;
 	//定义Tab选项卡标示符
 	private static final String HOME_TAB = "home_tab";
 	private static final String MENTION_TAB = "mention_tab";
@@ -54,6 +63,10 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		initView();
 		
 		initData();
+
+		info1();
+		info2();
+		info3();
 	}
 	
 	/**
@@ -78,6 +91,11 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		mentionRb = ((RadioButton) findViewById(R.id.radio_mention));
 		personRb = ((RadioButton) findViewById(R.id.radio_person_info));
 		moreRb = ((RadioButton) findViewById(R.id.radio_more));
+		
+		button1 = (Button) findViewById(R.id.button1);
+		button2 = (Button) findViewById(R.id.button2);
+		button3 = (Button) findViewById(R.id.button3);
+		
 	}
 	
 	/**
@@ -138,6 +156,54 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 			}
 		}
 	}
+	
+	public void info1(){
+		
+		button1.setOnClickListener(new OnClickListener(){
+			
+			public void onClick(View v){
+				Toast.makeText(MainActivity.this, "The Calculator is a basic everyday calculator.", Toast.LENGTH_LONG).show();
+				Toast.makeText(MainActivity.this, "It can do the 4 operations, squares and roots as well as having a memory function.", Toast.LENGTH_LONG).show();
+			}
+		});
+	}
+	public void info2(){
+		
+		button2.setOnClickListener(new OnClickListener() {
+	
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Toast.makeText(
+						MainActivity.this,
+						"Pressing 'start timer' will start the game where you press the button as many times as you can in 30 seconds.",
+						Toast.LENGTH_LONG).show();
+				Toast.makeText(
+						MainActivity.this,
+						"You do not have to start the timer to use the counter",
+						Toast.LENGTH_LONG).show();
+				Toast.makeText(
+						MainActivity.this,
+						"Without the timer, the counter will function as normal",
+						Toast.LENGTH_LONG).show();
+				
+			}
+	
+	
+			
+		});
+	}
+	
+	public void info3(){
+		
+		button3.setOnClickListener(new OnClickListener(){
+			
+			public void onClick(View v){
+				Toast.makeText(MainActivity.this, "The Exchanger can exchange currencies from around the world.", Toast.LENGTH_LONG).show();
+				Toast.makeText(MainActivity.this, "Select your currencies, type your amount of money in the gap, and press the convert symbol.", Toast.LENGTH_LONG).show();
+			}
+		});
+	}
 
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
@@ -172,5 +238,6 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 						}).create().show();
 	}
 	
+
 	
 }

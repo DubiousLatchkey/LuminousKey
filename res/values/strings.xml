@@ -296,5 +296,6 @@
     <string name="leaderboard">High score</string>
     <string name="highScores">High Scores</string>
     <string name="title_activity_leaderboard">Leaderboard</string>
+    <string name="Welcome">Welcome to daily helper. click the buttons to learn about each function of this app!</string>
     
 </resources>

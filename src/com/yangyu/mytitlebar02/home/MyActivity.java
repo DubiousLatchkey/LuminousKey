@@ -17,22 +17,20 @@ public class MyActivity extends Activity {
 	private ProgressBar proBar;
 	
 	//定义图片
-	private ImageView xjImage;
-	
-	@Override
+		@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_my_activity);
 		
 		proBar = (ProgressBar)findViewById(R.id.home_progress_like);
 		
-		xjImage = (ImageView)findViewById(R.id.image_xianjian);
+
 		
 		//定义一个Handler事件
 		new Handler().postDelayed(new Runnable() {
 			public void run() {
 				proBar.setVisibility(8);
-				xjImage.setVisibility(0);
+
 			}
 		}, 2000);
 	}
