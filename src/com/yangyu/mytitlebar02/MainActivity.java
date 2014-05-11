@@ -61,7 +61,6 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		}  
 
 		initView();
-		
 		initData();
 
 /*		info1();
