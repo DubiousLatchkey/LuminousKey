@@ -44,7 +44,7 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 	private RadioButton homeRb,mentionRb,personRb,moreRb;
 	
 	//定义消息提示文本对象
-	private TextView mMessageTipsMention,mMessageTipsPerson;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -78,8 +78,7 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		mMoreIntent = new Intent(this, MoreActivity.class);
 		
 		//得到消息提示文本对象
-		mMessageTipsMention = (TextView) findViewById(R.id.message_mention);
-		mMessageTipsPerson = (TextView) findViewById(R.id.message_person);
+		
 		
 		//得到单选按钮对象
 		homeRb = ((RadioButton) findViewById(R.id.radio_home));
@@ -102,8 +101,6 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 		moreRb.setOnCheckedChangeListener(this);
 		
 		//给消息提示文本设置文字
-		mMessageTipsMention.setText("2");
-		mMessageTipsPerson.setText("4"); 
 		
 		//添加进Tab选项卡
 		mTabHost.addTab(buildTabSpec(HOME_TAB, mHomeIntent));
@@ -135,11 +132,9 @@ public class MainActivity extends TabActivity implements OnCheckedChangeListener
 			case R.id.radio_mention:
 				mTabHost.setCurrentTabByTag(MENTION_TAB);
 				//VISIBLE:0  意思是可见的;INVISIBILITY:4 意思是不可见的，但还占着原来的空间;GONE:8  意思是不可见的，不占用原来的布局空间 
-				mMessageTipsMention.setVisibility(8);
 				break;
 			case R.id.radio_person_info:
 				mTabHost.setCurrentTabByTag(PERSON_TAB);
-				mMessageTipsPerson.setVisibility(8);
 				break;
 			case R.id.radio_more:
 				mTabHost.setCurrentTabByTag(MORE_TAB);
