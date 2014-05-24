@@ -20,9 +20,9 @@ import com.yangyu.mytitlebar02.R;
 public class HomeActivity extends ActivityGroup implements OnClickListener{
 	//定义帧布局对象
 	private FrameLayout mContent;
-	public Button button1;
-	public Button button2;
-	public Button button3;
+	public Button buttonA;
+	public Button buttonB;
+	public Button buttonC;
 	
 	//定义图片按钮对象
 	
@@ -35,9 +35,9 @@ public class HomeActivity extends ActivityGroup implements OnClickListener{
 		setContentView(R.layout.home_activity);
 		
 		
-		button1 = (Button) findViewById(R.id.button1);
-		button2 = (Button) findViewById(R.id.button2);
-		button3 = (Button) findViewById(R.id.button3);
+		buttonA = (Button) findViewById(R.id.button1);
+		buttonB = (Button) findViewById(R.id.button2);
+		buttonC = (Button) findViewById(R.id.button3);
 		
 		//得到按钮对象
 
@@ -68,7 +68,7 @@ public class HomeActivity extends ActivityGroup implements OnClickListener{
 	}	
 	public void info1(){
 		
-		button1.setOnClickListener(new OnClickListener(){
+		buttonA.setOnClickListener(new OnClickListener(){
 			
 			public void onClick(View v){
 				Toast.makeText(HomeActivity.this, "The Calculator is a basic everyday calculator.", Toast.LENGTH_LONG).show();
@@ -78,7 +78,7 @@ public class HomeActivity extends ActivityGroup implements OnClickListener{
 	}
 	public void info2(){
 		
-		button2.setOnClickListener(new OnClickListener() {
+		buttonB.setOnClickListener(new OnClickListener() {
 	
 			@Override
 			public void onClick(View v) {
@@ -105,7 +105,7 @@ public class HomeActivity extends ActivityGroup implements OnClickListener{
 	
 	public void info3(){
 		
-		button3.setOnClickListener(new OnClickListener(){
+		buttonC.setOnClickListener(new OnClickListener(){
 			
 			public void onClick(View v){
 				Toast.makeText(HomeActivity.this, "The Exchanger can exchange currencies from around the world.", Toast.LENGTH_LONG).show();
