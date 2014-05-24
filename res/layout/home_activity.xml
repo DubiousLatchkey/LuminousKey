@@ -26,31 +26,32 @@
             android:layout_marginTop="40dp"
             android:text="@string/Welcome" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/mention" />
+         <Button
+             android:id="@+id/button2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignRight="@+id/button3"
+             android:layout_below="@+id/textView1"
+             android:layout_marginTop="86dp"
+             android:text="@string/person_info" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/button1"
-            android:layout_alignRight="@+id/button1"
-            android:layout_below="@+id/button1"
-            android:text="@string/person_info" />
+         <Button
+             android:id="@+id/button1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignRight="@+id/button2"
+             android:layout_below="@+id/textView1"
+             android:layout_marginTop="30dp"
+             android:text="@string/remind" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/button2"
-            android:layout_below="@+id/button2"
-            android:text="@string/more" />
-
+         <Button
+             android:id="@+id/button3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/button2"
+             android:text="@string/more" />
+       
 </RelativeLayout>
