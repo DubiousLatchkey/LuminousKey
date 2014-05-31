@@ -73,7 +73,7 @@
     <string name="alerm_title">calculator</string>
     <string name="alert_quit_confirm">Are you sure you want to quit?</string>
     <string name="alert_clean_history">确认清除搜索记录？</string>
-    <string name="alert_yes_button">config</string>
+    <string name="alert_yes_button">confirm</string>
     <string name="alert_no_button">cancel</string>
     <string name="text_cancel">cancel</string>
     <string name="text_no_search_record">无搜索记录</string>
