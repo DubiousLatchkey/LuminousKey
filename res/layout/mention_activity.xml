@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mention"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:background="#fff1f1f1" >
 
     <!-- 标题栏 -->
@@ -25,28 +25,35 @@
         </EditText>
         
         <TableLayout
-        android:id="@+id/tablelayout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView1"
-        android:layout_margin="4dip" android:layout_weight="10">
+            android:id="@+id/tablelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_margin="4dip"
+            android:layout_weight="10" >
         
         <LinearLayout
         android:id="@+id/linearlayout02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
         android:layout_weight="1">
+
         	<Button
-        	android:layout_width="50dip"
-        	android:layout_height="fill_parent"
-        	android:layout_weight="1"
-        	android:textSize="25sp" android:id="@+id/buttonc" android:text="@string/shan">
+        	    android:id="@+id/buttonc"
+        	    android:layout_width="48dp"
+        	    android:layout_height="56dp"
+        	    android:layout_weight="1"
+        	    android:background="@drawable/custom_btn_breaker_bay"
+        	    android:text="@string/shan"
+        	    android:textSize="25sp" >
+
         	</Button>
 
         	<Button
         	android:layout_width="50dip"
         	android:layout_height="fill_parent"
         	android:layout_weight="1"
+        	android:background="@drawable/custom_btn_breaker_bay"
         	android:textSize="25sp" android:id="@+id/buttonce" android:text="@string/shanchu">
         	</Button>
         	
@@ -54,7 +61,8 @@
         	android:layout_width="50dip"
         	android:layout_height="fill_parent"
         	android:layout_weight="1"
-        	android:textSize="25sp" android:id="@+id/buttonback" android:text="@string/backSpace">
+        	android:background="@drawable/custom_btn_breaker_bay"
+            android:textSize="25sp" android:id="@+id/buttonback" android:text="@string/backSpace">
         	</Button>
 
         </LinearLayout>
@@ -68,8 +76,9 @@
         		<Button
         		    android:id="@+id/buttonmrc"
         		    android:layout_width="40dip"
-        		    android:layout_height="fill_parent"
+        		    android:layout_height="56dp"
         		    android:layout_weight="1"
+        		    android:background="@drawable/custom_btn_sandrift"
         		    android:text="@string/memoryclear"
         		    android:textSize="25sp" >
 
@@ -81,6 +90,7 @@
         		    android:layout_height="fill_parent"
         		    android:layout_weight="1"
         		    android:text="@string/memoryplus"
+        		    android:background="@drawable/custom_btn_sandrift"
         		    android:textSize="25sp" >
 
         		</Button>
@@ -91,6 +101,7 @@
         		    android:layout_height="fill_parent"
         		    android:layout_weight="1"
         		    android:text="@string/memoryminus"
+        		    android:background="@drawable/custom_btn_sandrift"
         		    android:textSize="25sp" >
 
         		</Button>
@@ -101,6 +112,7 @@
         		    android:layout_height="fill_parent"
         		    android:layout_weight="1"
         		    android:text="@string/memoryshow"
+        		    android:background="@drawable/custom_btn_sandrift"
         		    android:textSize="25sp" >
 
         		</Button>
@@ -114,8 +126,9 @@
         		<Button
         		    android:id="@+id/button1"
         		    android:layout_width="40dip"
-        		    android:layout_height="fill_parent"
+        		    android:layout_height="56dp"
         		    android:layout_weight="1"
+        		    android:background="@drawable/btnstyleshakespeare"
         		    android:text="@string/one"
         		    android:textSize="25sp" >
 
@@ -124,18 +137,21 @@
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/two" android:id="@+id/button2">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/three" android:id="@+id/button3">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/custom_btn_orange"
         		android:textSize="25sp" android:text="@string/jia" android:id="@+id/button01">
         		</Button>
         	</TableRow>
@@ -145,28 +161,36 @@
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
         	android:layout_weight="1">
+
         		<Button
-        		android:layout_width="40dip"
-        		android:layout_height="fill_parent"
-        		android:layout_weight="1"
-        		android:textSize="25sp" android:text="@string/fore" android:id="@+id/button4">
+        		    android:id="@+id/button4"
+        		    android:layout_width="40dip"
+        		    android:layout_height="56dp"
+        		    android:layout_weight="1"
+        		    android:background="@drawable/btnstyleshakespeare"
+        		    android:text="@string/fore"
+        		    android:textSize="25sp" >
+
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/five" android:id="@+id/button5">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/six" android:id="@+id/button6">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/custom_btn_orange"
         		android:textSize="25sp" android:text="@string/jian" android:id="@+id/button02">
         		</Button>
         	</TableRow>
@@ -176,28 +200,36 @@
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
         	android:layout_weight="1">
+
         		<Button
-        		android:layout_width="40dip"
-        		android:layout_height="fill_parent"
-        		android:layout_weight="1"
-        		android:textSize="25sp" android:text="@string/seven" android:id="@+id/button7">
+        		    android:id="@+id/button7"
+        		    android:layout_width="40dip"
+        		    android:layout_height="56dp"
+        		    android:layout_weight="1"
+        		    android:background="@drawable/btnstyleshakespeare"
+        		    android:text="@string/seven"
+        		    android:textSize="25sp" >
+
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/eight" android:id="@+id/button8">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/btnstyleshakespeare"
         		android:textSize="25sp" android:text="@string/nine" android:id="@+id/button9">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/custom_btn_orange"
         		android:textSize="25sp" android:text="@string/cheng" android:id="@+id/button03">
         		</Button>
        	 	 </TableRow>
@@ -207,28 +239,36 @@
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
         	android:layout_weight="1">
+
         		<Button
-        		android:layout_width="40dip"
-        		android:layout_height="fill_parent"
-        		android:layout_weight="1"
-        		android:textSize="25sp" android:text="@string/zero" android:id="@+id/button0">
+        		    android:id="@+id/button0"
+        		    android:layout_width="40dip"
+        		    android:layout_height="56dp"
+        		    android:layout_weight="1"
+        		    android:background="@drawable/btnstyleshakespeare"
+        		    android:text="@string/zero"
+        		    android:textSize="25sp" >
+
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background="@drawable/custom_button_sorbus"
         		android:textSize="25sp" android:id="@+id/button06" android:text="@string/dihao">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background="@drawable/custom_button_beige"
         		android:textSize="25sp" android:text="@string/dengyu" android:id="@+id/button05">
         		</Button>
         		<Button
         		android:layout_width="40dip"
         		android:layout_height="fill_parent"
         		android:layout_weight="1"
+        		android:background = "@drawable/custom_btn_orange"
         		android:textSize="25sp" android:text="@string/chu" android:id="@+id/button04">
         		</Button>
        	  </TableRow>
@@ -238,21 +278,33 @@
         android:layout_height="wrap_content" 
         android:orientation="horizontal"
         android:layout_weight="1">
-           <Button 
-           android:textSize="25sp" 
-           android:layout_height="fill_parent" 
-           android:layout_width="50dp" android:layout_weight="1" android:text="@string/zhengfu" android:id="@+id/zheng">
+
+           <Button
+               android:id="@+id/zheng"
+               android:layout_width="50dp"
+               android:layout_height="56dp"
+               android:layout_weight="0.72"
+               android:background="@drawable/custom_btn_orange"
+               android:text="@string/zhengfu"
+               android:textSize="25sp" >
+
            </Button>
-           <Button 
-           android:id="@+id/pingfang" 
-           android:textSize="25sp" 
-           android:layout_height="fill_parent" 
-           android:layout_width="50dp" android:layout_weight="1" android:text="@string/ping">
+
+           <Button
+               android:id="@+id/pingfang"
+               android:layout_width="50dp"
+               android:layout_height="56dp"
+               android:layout_weight="0.99"
+               android:background="@drawable/custom_btn_orange"
+               android:text="@string/ping"
+               android:textSize="25sp" >
+
            </Button>
            <Button 
            android:id="@+id/kaifang" 
            android:textSize="25sp" 
            android:layout_height="fill_parent" 
+           android:background = "@drawable/custom_btn_orange"
            android:layout_width="50dp" android:layout_weight="1" android:text="@string/kai">
            </Button>
 
@@ -260,77 +312,11 @@
        </TableLayout>
 
 
-    <FrameLayout
-        android:id="@+id/mention_content"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="-12.0dip">
-
-        <!-- 回复我的 -->
-
-        <FrameLayout
-            android:id="@+id/mention_layout_replyme"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" >
-
-            <ListView
-                android:id="@+id/mention_lv_replyme"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:background="#fff1f1f1"
-                android:cacheColorHint="#fff1f1f1"
-                android:divider="@drawable/list_divider"
-                android:fadingEdge="vertical"
-                android:fadingEdgeLength="3.0dip"
-                android:listSelector="@drawable/list_selector"
-                android:visibility="visible" />
-
-            <ProgressBar
-                android:id="@+id/mention_progress_replyme"
-                style="?android:attr/progressBarStyleInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:indeterminateDrawable="@drawable/progressbar"
-                android:visibility="gone" />
-        </FrameLayout>
-
-        <!-- @我的 -->
-
-        <FrameLayout
-            android:id="@+id/mention_layout_atme"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:visibility="gone" >
-
-            <ListView
-                android:id="@+id/mention_lv_atme"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:background="#fff1f1f1"
-                android:cacheColorHint="#fff1f1f1"
-                android:divider="@drawable/list_divider"
-                android:fadingEdge="vertical"
-                android:fadingEdgeLength="3.0dip"
-                android:listSelector="@drawable/list_selector" />
-
-            <ProgressBar
-                android:id="@+id/mention_progress_atme"
-                style="?android:attr/progressBarStyleInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:indeterminateDrawable="@drawable/progressbar"
-                android:visibility="gone" />
-        </FrameLayout>
-    </FrameLayout>
+    
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mention_content"
         android:layout_centerHorizontal="true"
         android:gravity="center" >
 
