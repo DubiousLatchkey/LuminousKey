@@ -34,18 +34,17 @@ public class PersonInfoActivity extends Activity {
 	private static final String BUTTON_COUNT = "BUTTON_COUNT";
 	private static final String HIGH_SCORE = "HIGH_SCORE";
 
-	public static double i = 0;
+	public static int i = 0;
 	public int a = 0;
 	public int j = 0;
 	public Button button1;
 	public Button button2;
 	public Button button3;
-	public Button button4;
+	public static Button pps;
+	public static Button pressText;
+	public static Button totalPress;
+	public static Button timer;
 	public Switch sound;
-	public TextView textView;
-	public TextView total;
-	public static TextView mTextView;
-	public static TextView textView2;
 	public static double y = 0;
 	String yy = Double.toString(y);
 
@@ -76,15 +75,14 @@ public class PersonInfoActivity extends Activity {
 		button1 = (Button) findViewById(R.id.button1);
 		button2 = (Button) findViewById(R.id.button2);
 		button3 = (Button) findViewById(R.id.button3);
-		button4 = (Button) findViewById(R.id.button4);
+		pressText = (Button) findViewById(R.id.button5);
+		totalPress = (Button) findViewById(R.id.button8);
+		timer = (Button) findViewById(R.id.button10);
+		pps = (Button) findViewById(R.id.button4);
 		sound = (Switch) findViewById(R.id.switch1);
-		textView = new TextView(this);
-		textView = (TextView) findViewById(R.id.textView);
-		total = (TextView) findViewById(R.id.textView1);
-		mTextView = (TextView) findViewById(R.id.mtextView);
-		textView2 = (TextView) findViewById(R.id.textView2);
-		textView.setTextSize(14);
-		mTextView.setTextSize(20);
+		
+		
+
 
 		final MyCounter timer = new MyCounter(30000, 1000);
 
@@ -93,7 +91,7 @@ public class PersonInfoActivity extends Activity {
 			public void onClick(View v) {
 				timer.start();
 				i = 0;
-				textView.setText("You have pressed the button 0 times");
+				pressText.setText("0");
 
 			}
 		});
@@ -112,29 +110,32 @@ public class PersonInfoActivity extends Activity {
 				e.printStackTrace(System.err);
 			}
 		} else {
-			i = savedInstanceState.getDouble(BUTTON_COUNT);
+			i = savedInstanceState.getInt(BUTTON_COUNT);
 			j = savedInstanceState.getInt(TOTAL_COUNT);
 			y = savedInstanceState.getDouble(HIGH_SCORE);
 
 		}
 		if (i == 1) {
-			textView.setText("You have pressed the button 1 time this session");
+			pressText.setText(Integer.toString(i));
 
 		}
 		if (i > 1) {
-			textView.setText("You have pressed the button " + i
-					+ " times this session");
+			pressText.setText(Integer.toString(i));
+			 
+			
+
 		}
 		if (j > 1)
-			total.setText("You have pressed the button a total of " + j
-					+ " times");
-		else if (j == 1) {
-			total.setText("Yout have pressed the button a total of 1 time");
+
+		totalPress.setText(Integer.toString(j));
+		
+		
+		if (j == 1) {
+			totalPress.setText(Integer.toString(j));
 		}
 
 		click();
 		reset();
-		help();
 		highScoreSave();
 		totalSave();
 	}
@@ -169,6 +170,11 @@ public class PersonInfoActivity extends Activity {
 					@Override
 					public void onClick(View arg0) {
 						
+						if (a == 1){
+							a = 0;
+						} else {
+							a = 1;
+						}
 						
 					}
 					
@@ -180,19 +186,21 @@ public class PersonInfoActivity extends Activity {
 				}
 				j++;
 				if (j > 1) {
-					total.setText("You have pressed the button a total of " + j
-							+ " times");
+					totalPress.setText(Integer.toString(j));
+
+					
 				} else if (j == 1) {
-					total.setText("You have pressed the button a total of 1 time");
+					totalPress.setText("1");
+
 				}
 				i++;
 				if (i == 1) {
-					textView.setText("You have pressed the button 1 time this session");
+					pressText.setText("1");
+
 
 				}
 				if (i > 1) {
-					textView.setText("You have pressed the button " + i
-							+ " times this session");
+					pressText.setText(Integer.toString(i));
 				}
 			}
 		});
@@ -209,35 +217,11 @@ public class PersonInfoActivity extends Activity {
 				i = 0;
 				Toast.makeText(PersonInfoActivity.this, "reset!", Toast.LENGTH_SHORT)
 						.show();
-				textView.setText("You have pressed the button 0 times this session");
+				pressText.setText("0");
 			}
 		});
 	}
 
-	public void help() {
-		button4.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				highScoreSave();
-				totalSave();
-				Toast.makeText(
-						PersonInfoActivity.this,
-						"Pressing 'start timer' will start the game where you press the button as many times as you can in 30 seconds.",
-						Toast.LENGTH_LONG).show();
-				Toast.makeText(
-						PersonInfoActivity.this,
-						"You do not have to start the timer to use the counter",
-						Toast.LENGTH_LONG).show();
-				Toast.makeText(
-						PersonInfoActivity.this,
-						"Without the timer, the counter will function as normal",
-						Toast.LENGTH_LONG).show();
-
-			}
-
-		});
-	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
@@ -284,6 +268,8 @@ public class PersonInfoActivity extends Activity {
 		} else {
 			a = 0;
 		}
+		getTotal();
+		getHighScore();
 
 	}
 
@@ -342,11 +328,10 @@ public class PersonInfoActivity extends Activity {
 					Toast.LENGTH_SHORT).show();
 			i = 0;
 			j = 0;
-			total.setText("You have pressed the button a total of " + j
-					+ " times");
-			textView.setText("You have pressed the button " + i
-					+ " times this session");
-			textView2.setText("");
+			pps.setText("");
+			totalPress.setText("0");
+			pressText.setText("0");
+			pps.setText("0 pps");
 
 			return true;
 		} else if (item.getItemId() == R.id.leaderboard) {
@@ -355,6 +340,7 @@ public class PersonInfoActivity extends Activity {
 
 			return true;
 		}
+		
 
 		else {
 			return super.onOptionsItemSelected(item);

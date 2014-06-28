@@ -1,4 +1,6 @@
 package com.yangyu.mytitlebar02;
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,6 +22,7 @@ public class MentionActivity extends Activity {
 	int c=0,flag=0;
 	double b=0.0,g=0.0,f=0.0;
 	View vi;
+    DecimalFormat decimalFormat=new DecimalFormat("#.#");
 
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,9 +42,12 @@ public class MentionActivity extends Activity {
 		switch(c){
 		case 0:f=g;break;
 		case 1:f=b+g;break;
-		case 2:f=b-g;break;
-		case 3:f=b*g;break;
-		case 4:f=b/g;break;
+		case 2:f=b-g;
+		break;
+		case 3:f=b*g;
+		break;
+		case 4:f=b/g;
+		break;
 		}
 		
 		b=f;
@@ -367,8 +373,12 @@ public class MentionActivity extends Activity {
 					else{
 						g=Double.parseDouble(str);
 						calculater();
+						if(f % 1 == 0 && f != 0){
+							et.setText(decimalFormat.format(f));
+						} else{
 						str=""+f;
 						et.setText(str);
+						}
 						c=1;
 						flag=1;
 						vi=v;
@@ -389,8 +399,12 @@ public class MentionActivity extends Activity {
 					else{
 						g=Double.parseDouble(str);
 						calculater();
+						if(f % 1 == 0 && f != 0){
+							et.setText(decimalFormat.format(f));
+						} else {
 						str=""+f;
 						et.setText(str);
+						}
 						c=2;
 						flag=1;
 						vi=v;
@@ -411,8 +425,12 @@ public class MentionActivity extends Activity {
 					else{
 						g=Double.parseDouble(str);
 						calculater();
+						if(f % 1 == 0 && f != 0){
+							et.setText(decimalFormat.format(f));
+						} else {
 						str=""+f;
 						et.setText(str);
+						}
 						c=3;
 						flag=1;
 						vi=v;
@@ -433,8 +451,12 @@ public class MentionActivity extends Activity {
 					else{
 						g=Double.parseDouble(str);
 						calculater();
+						if(f % 1 == 0 && f != 0){
+							et.setText(decimalFormat.format(f));
+						} else {
 						str=""+f;
 						et.setText(str);
+						}
 						c=4;
 						flag=1;
 						vi=v;
@@ -451,8 +473,12 @@ public class MentionActivity extends Activity {
 					if(str!=""&&vi!=fuhao[0]&&vi!=fuhao[1]&&vi!=fuhao[2]&&vi!=fuhao[3]){
 						g=Double.parseDouble(str);
 						calculater();
+						if(f % 1 == 0 && f != 0){
+							et.setText(decimalFormat.format(f));
+						} else {
 						str=""+f;
 						et.setText(str);
+						}
 						flag=1;
 						vi=v;
 

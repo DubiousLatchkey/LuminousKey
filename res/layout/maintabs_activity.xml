@@ -42,26 +42,28 @@
                 <RadioButton
                     android:id="@+id/radio_home"
                     style="@style/main_tab_bottom"
-                    android:drawableTop="@drawable/tabs_home"
+                    android:drawableTop="@drawable/glyphicons_020_home"
                     android:text="@string/bar" />
 
                 <RadioButton
                     android:id="@+id/radio_mention"
                     style="@style/main_tab_bottom"
-                    android:drawableTop="@drawable/tabs_sort"
+                    android:drawableTop="@drawable/glyphicons_323_calculator"
                     android:text="@string/remind" />
 
                 <RadioButton
                     android:id="@+id/radio_person_info"
                     style="@style/main_tab_bottom"
-                    android:drawableTop="@drawable/tabs_search"
+                    android:drawableTop="@drawable/glyphicons_055_stopwatch"
                     android:text="@string/person_info" />
 
                 <RadioButton
                     android:id="@+id/radio_more"
                     style="@style/main_tab_bottom"
-                    android:drawableTop="@drawable/tabs_more"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/glyphicons_037_coin"
                     android:text="@string/more" />
+
             </RadioGroup>
 
  
