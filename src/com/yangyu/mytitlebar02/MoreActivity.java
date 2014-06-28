@@ -62,6 +62,7 @@ public class MoreActivity extends Activity {
 				
 	}
 	//get the selected dropdown list value
+	
 			public void addListenerOnButton() {
 				from = (Spinner)findViewById(R.id.spinner2);
 				to = (Spinner)findViewById(R.id.spinner3);
